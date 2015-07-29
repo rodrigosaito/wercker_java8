@@ -31,7 +31,7 @@ script: |-
   type java || { echo "I expected java to be available after oracle-java8-installer installation. Aborting."; exit 1; }
 
   # Install maven
-  wget -O $WERCKER_CACHE_DIR/maven.tgz http://www.us.apache.org/dist/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.tar.gz
+  wget -O $WERCKER_CACHE_DIR/maven.tgz http://mirror.nbtelecom.com.br/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
   cd /opt && sudo tar xzvf $WERCKER_CACHE_DIR/maven.tgz && sudo ln -s apache-maven-* maven
   sudo ln -s /opt/maven/bin/mvn /usr/bin/mvn
 
